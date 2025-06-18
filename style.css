@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f0f3e, #2d2d86);
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  padding: 50px 20px;
+}
+
+.main-character {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #00e0ff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #00e0ff;
+  color: black;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+footer {
+  padding: 20px;
+  background: #000030;
+}
