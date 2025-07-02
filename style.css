@@ -1,0 +1,13 @@
+body {
+  background: 
+    radial-gradient(circle at center, #FFD700 0%, #FF8C00 50%, #8B4513 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  background-blend-mode: overlay;
+  min-height: 100vh; /* لتغطية الصفحة كاملة */
+}
