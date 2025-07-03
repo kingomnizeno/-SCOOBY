@@ -10,9 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- زر التمرير الجديد -->
+  <button id="scrollBtn" title="Scroll" aria-label="Scroll button">↓</button>
+
   <div class="cartoon-border hero">
     <h1 class="logo">$SCOOBY DOO</h1>
-    <span class="contract-address">  0x0000000000000000000000000000000000000000</span>
+    <span class="contract-address"> 0x0000000000000000000000000000000000000000</span>
     <a href="https://dexscreener.com/" class="button buy-button" target="_blank">🚀 Buy Now</a>
     <div class="social-icons">
       <a href="https://t.me/SCOOBYDOOCommunity" target="_blank" aria-label="Telegram">
@@ -61,33 +64,17 @@
     </div>
   </footer>
 
-  <!-- زر التمرير الذكي -->
-  <button id="scrollBtn" aria-label="Scroll button">↑</button>
-
-  <!-- السكريبت -->
   <script>
-    // زر التمرير
+    // زر التمرير المحسن
     const scrollBtn = document.getElementById('scrollBtn');
-    let isAtBottom = false;
-
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollBtn.classList.add('show');
-        scrollBtn.textContent = isAtBottom ? '↑' : '↓';
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
+    
     scrollBtn.addEventListener('click', () => {
-      if (!isAtBottom) {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        scrollBtn.textContent = '↑';
-        isAtBottom = true;
-      } else {
+      if (window.pageYOffset > document.body.scrollHeight / 2) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         scrollBtn.textContent = '↓';
-        isAtBottom = false;
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        scrollBtn.textContent = '↑';
       }
     });
   </script>
