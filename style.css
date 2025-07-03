@@ -1,4 +1,4 @@
-/* الخلفية الثابتة مع تحسين الأداء */
+/* الخلفية الثابتة */
 body {
   background: 
     linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)),
@@ -11,44 +11,48 @@ body {
   padding: 20px;
 }
 
-/* تحسينات الأداء */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* زر التمرير */
+/* زر التمرير الجديد */
 #scrollBtn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
   background: #FF4500;
   color: white;
   border: 3px solid #8B4513;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  opacity: 0;
-  transition: all 0.3s ease;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#scrollBtn.show {
   opacity: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 #scrollBtn:hover {
   background: #FF6347;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(360deg);
 }
 
-/* بقية التنسيقات مع تحسينات */
+/* الأيقونات الكبيرة */
+.social-icons a i {
+  font-size: 60px;
+  margin: 0 15px;
+  color: #FFD700;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+  color: #FF4500;
+}
+
+/* بقية التنسيقات */
 .cartoon-border {
   border: 4px dashed #FFD700;
   border-radius: 20px;
@@ -61,21 +65,27 @@ body {
   transition: transform 0.3s;
 }
 
-.cartoon-border:hover {
-  transform: translateY(-5px);
+.hero h1 {
+  font-size: 4rem;
+  color: #FF4500;
+  text-shadow: 3px 3px 0 #8B4513, -1px -1px 0 #000;
 }
 
-/* ... (بقية التنسيقات من الإجابة السابقة تبقى كما هي) ... */
+.button {
+  background: #FF4500;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
 
-/* تحسينات للهواتف */
 @media (max-width: 768px) {
-  h1 {
+  .hero h1 {
     font-size: 2.5rem;
   }
   
-  #scrollBtn {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+  .social-icons a i {
+    font-size: 50px;
   }
 }
