@@ -1,1 +1,210 @@
+/* الأساسيات */
+:root {
+  --primary: #FF4500;
+  --secondary: #8B4513;
+  --accent: #FFD700;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: 
+    linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)),
+    url('back2.jfif') center/cover no-repeat fixed;
+  background-blend-mode: overlay;
+  color: white;
+  font-family: 'Comic Neue', cursive;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* زر التمرير */
+#scrollBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border: 3px solid var(--secondary);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+#scrollBtn:hover {
+  background: #FF6347;
+  transform: scale(1.1);
+}
+
+/* التصميم العام */
+.cartoon-border {
+  border: 4px dashed var(--accent);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--secondary);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  margin: 20px 0;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.cartoon-border:hover {
+  transform: translateY(-5px);
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: var(--primary);
+  text-shadow: 3px 3px 0 var(--secondary), 
+              -1px -1px 0 #000;
+  margin-bottom: 20px;
+}
+
+.contract-address {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 5px;
+  margin: 15px auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.button {
+  background: var(--primary);
+  color: white;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px 0;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: #FF6347;
+  transform: translateY(-3px);
+}
+
+.social-icons {
+  margin: 30px 0;
+}
+
+.social-icons a i {
+  font-size: 60px;
+  margin: 0 15px;
+  color: var(--accent);
+  transition: all 0.3s;
+}
+
+.social-icons a:hover i {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+section h2 {
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  color: var(--accent);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .social-icons a i {
+    font-size: 50px;
+    margin: 0 10px;
+  }
+  
+  #scrollBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .cartoon-border {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .social-icons a i {
+    font-size: 40px;
+  }
+}
