@@ -17,8 +17,7 @@ html {
 }
 
 body {
-  background: 
-    linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)); /* تم إزالة الخلفية القديمة */
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)); /* تم إزالة الخلفية القديمة */
   color: white;
   font-family: 'Comic Neue', cursive;
   min-height: 100vh;
@@ -121,10 +120,12 @@ body {
 
 .social-icons {
   margin: 30px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons a i {
-  font-size: 60px;
+  font-size: 40px; /* تم تعديل الحجم إلى 40px */
   margin: 0 15px;
   color: var(--accent);
   transition: all 0.3s;
@@ -180,7 +181,7 @@ footer {
   }
 
   .social-icons a i {
-    font-size: 50px;
+    font-size: 40px; /* التأكد من أن الأيقونات تتناسب على الهواتف */
   }
 
   #scrollBtn {
@@ -202,6 +203,6 @@ footer {
   }
 
   .social-icons a i {
-    font-size: 40px;
+    font-size: 40px; /* حجم الأيقونات المتناسق مع الشاشات الصغيرة */
   }
 }
