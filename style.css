@@ -3,6 +3,7 @@
   --primary: #FF4500;
   --secondary: #8B4513;
   --accent: #FFD700;
+  --vh: 1vh;
 }
 
 * {
@@ -11,24 +12,28 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)); /* تم إزالة الخلفية القديمة */
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)) fixed;
   color: white;
   font-family: 'Comic Neue', cursive;
   min-height: 100vh;
-  padding: 20px;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 10px;
   position: relative;
 }
 
 .main-container {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 10px;
 }
 
 /* زر التمرير */
@@ -65,8 +70,8 @@ body {
   border-radius: 20px;
   box-shadow: 5px 5px 0 var(--secondary);
   background: rgba(0, 0, 0, 0.6);
-  padding: 25px;
-  margin: 20px 0;
+  padding: 20px;
+  margin: 15px 0;
   backdrop-filter: blur(5px);
   transition: transform 0.3s;
 }
@@ -77,15 +82,16 @@ body {
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 15px;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--primary);
   text-shadow: 3px 3px 0 var(--secondary), 
               -1px -1px 0 #000;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .contract-address {
@@ -97,6 +103,8 @@ body {
   margin: 15px auto;
   max-width: 100%;
   overflow-x: auto;
+  word-break: break-all;
+  font-size: 0.9rem;
 }
 
 .button {
@@ -104,12 +112,12 @@ body {
   color: white;
   border: 3px solid #000;
   border-radius: 15px;
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 25px;
+  font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
-  margin: 20px 0;
+  margin: 15px 0;
   transition: all 0.3s;
 }
 
@@ -119,14 +127,14 @@ body {
 }
 
 .social-icons {
-  margin: 30px 0;
+  margin: 25px 0;
   display: flex;
   justify-content: center;
 }
 
 .social-icons a i {
-  font-size: 40px; /* تم تعديل الحجم إلى 40px */
-  margin: 0 15px;
+  font-size: 35px;
+  margin: 0 12px;
   color: var(--accent);
   transition: all 0.3s;
 }
@@ -138,20 +146,21 @@ body {
 
 section h2 {
   color: var(--accent);
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 ul {
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
+  padding-left: 15px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 15px;
+  margin-top: 30px;
 }
 
 .footer-links a {
@@ -167,21 +176,18 @@ footer {
 
 /* للهواتف */
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
-
+  
   .button {
-    padding: 12px 25px;
+    padding: 10px 20px;
     font-size: 1rem;
   }
 
   .social-icons a i {
-    font-size: 40px; /* التأكد من أن الأيقونات تتناسب على الهواتف */
+    font-size: 30px;
+    margin: 0 10px;
   }
 
   #scrollBtn {
@@ -193,16 +199,30 @@ footer {
   }
 
   .cartoon-border {
-    padding: 20px 15px;
+    padding: 15px;
+  }
+  
+  section h2 {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-
+  
   .social-icons a i {
-    font-size: 40px; /* حجم الأيقونات المتناسق مع الشاشات الصغيرة */
+    font-size: 28px;
+  }
+  
+  .contract-address {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
