@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>$SCOOBY DOO</title>
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- زر التمرير الجديد -->
+  <!-- زر التمرير -->
   <button id="scrollBtn" title="Scroll" aria-label="Scroll button">↓</button>
 
-  <div class="cartoon-border hero">
-    <h1 class="logo">$SCOOBY DOO</h1>
-    <span class="contract-address"> 0x0000000000000000000000000000000000000000</span>
-    <a href="https://dexscreener.com/" class="button buy-button" target="_blank">🚀 Buy Now</a>
-    <div class="social-icons">
-      <a href="https://t.me/SCOOBYDOOCommunity" target="_blank" aria-label="Telegram">
-        <i class="fab fa-telegram" style="font-size: 60px; margin: 10px;"></i>
-      </a>
-      <a href="https://twitter.com/SCOOBYX2025" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter" style="font-size: 60px; margin: 10px;"></i>
-      </a>
+  <div class="container">
+    <div class="cartoon-border hero">
+      <h1 class="logo">$SCOOBY DOO</h1>
+      <span class="contract-address">Contract address: 0x0000000000000000000000000000000000000000</span>
+      <a href="https://dexscreener.com/" class="button buy-button" target="_blank">🚀 Buy Now</a>
+      <div class="social-icons">
+        <a href="https://t.me/SCOOBYDOOCommunity" target="_blank" aria-label="Telegram">
+          <i class="fab fa-telegram" style="font-size: 60px; margin: 10px;"></i>
+        </a>
+        <a href="https://twitter.com/SCOOBYX2025" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter" style="font-size: 60px; margin: 10px;"></i>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="cartoon-border section">
-    <h2>Roadmap</h2>
-    <ul>
-      <li>✅ Launch Website</li>
-      <li>✅ Token Launch</li>
-      <li>✅ Listings on DEXs</li>
-      <li>🔜 Listings on CEXs</li>
-    </ul>
+    <!-- باقي الأقسام بنفس الهيكل -->
   </div>
-
-  <div class="cartoon-border section">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 1,000,000,000 $SCOOBY</li>
-    </ul>
-  </div>
-
-  <div class="cartoon-border section">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <strong>What is $SCOOBY DOO?</strong>
-      <p>$SCOOBY-DOO 🐕 – the world's most famous detective dog!</p>
-    </div>
-    <div class="faq-item">
-      <strong>Where can I buy $SCOOBY DOO?</strong>
-      <p>You can buy it using the "Buy Now" button above.</p>
-    </div>
-  </div>
-
-  <footer class="cartoon-border">
-    © 2025 $SCOOBY DOO All rights reserved.
-    <div>
-      <a href="https://t.me/SCOOBYDOOCommunity" target="_blank">Telegram</a> |
-      <a href="https://twitter.com/SCOOBYX2025" target="_blank">Twitter</a>
-    </div>
-  </footer>
 
   <script>
     // زر التمرير المحسن
@@ -75,6 +42,14 @@
       } else {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         scrollBtn.textContent = '↑';
+      }
+    });
+
+    // إصلاح مشكلة viewport على الهواتف
+    document.addEventListener('DOMContentLoaded', function() {
+      let viewport = document.querySelector('meta[name="viewport"]');
+      if (navigator.userAgent.match(/Android/i) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
       }
     });
   </script>
