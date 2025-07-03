@@ -15,14 +15,14 @@
   <div class="main-container">
     <div class="cartoon-border hero">
       <h1 class="logo">$SCOOBY DOO</h1>
-      <span class="contract-address"> GTLfa1LPksceHxUHp6mHyqLEYHASeHndz6pmMGnvpump</span>
+      <span class="contract-address">GTLfa1LPksceHxUHp6mHyqLEYHASeHndz6pmMGnvpump</span>
       <a href="https://dexscreener.com/solana/82vtjenqabshggx7g7tfoppulfrvspbz9whnqmx2sexw/" class="button buy-button" target="_blank">🚀 Buy Now</a>
       <div class="social-icons">
         <a href="https://t.me/SCOOBYDOOCommunity" target="_blank">
-          <i class="fab fa-telegram" style="font-size: 60px; margin: 10px;"></i>
+          <i class="fab fa-telegram"></i>
         </a>
         <a href="https://twitter.com/SCOOBYX2025" target="_blank">
-          <i class="fab fa-twitter" style="font-size: 60px; margin: 10px;"></i>
+          <i class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
@@ -64,16 +64,12 @@
   <script>
     // زر التمرير المحسن
     const scrollBtn = document.getElementById('scrollBtn');
-    
     scrollBtn.addEventListener('click', () => {
       if (window.scrollY > 100) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         scrollBtn.textContent = '↓';
       } else {
-        window.scrollTo({ 
-          top: document.body.scrollHeight,
-          behavior: 'smooth' 
-        });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         scrollBtn.textContent = '↑';
       }
     });
@@ -85,6 +81,7 @@
         document.querySelector('.main-container').style.padding = '10px';
       }
     }
+
     window.addEventListener('load', fixMobileView);
     window.addEventListener('resize', fixMobileView);
   </script>
